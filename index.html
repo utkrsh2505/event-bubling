@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+  
+        <div><input type="text" placeholder="name" id="name"/></div>
+        <div><input type="phone"placeholder="number" id="number"/></div>
+        <button id="btn">Create</button>
+    </div>
+        <div id="display"></div>
+        <div id="n1"></div>
+  
+
+    <script>
+        function handle(){
+            let name = document.getElementById("name").value;
+          
+            let div = document.createElement('div');
+            let nam= document.createElement('p');
+            nam.textContent = name;
+            let btn1 = document.createElement("button");
+            btn1.addEventListener("click",toggle);
+            btn1.textContent = "Show/Hide"
+            div.append(nam,btn1);
+            
+         
+            let display = document.getElementById("display");
+            display.textContent = "";
+            display.append(div);
+
+
+        }
+        function toggle(){
+            
+            let number = document.getElementById("number").value;
+
+            let n1= document.getElementById("n1");
+            if(n1.textContent){
+                n1.textContent = "";
+            }
+            else{
+    
+            n1.textContent = number;
+            }
+           
+         
+            
+
+        }
+        window.addEventListener("load",()=>{
+            let btn = document.getElementById("btn");
+            btn.addEventListener("click",handle);
+        })
+    </script>
+</body>
+</html>
