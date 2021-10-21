@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            font-size: 30px;
+            color: wheat;
+            background-color: turquoise;
+        }
+        .btnn{
+            background-color: yellow;
+            margin-top: 30px;
+           padding: 30px;
+           margin: 10px;
+            border: 1px solid black;
+            color: white;
+            background-color: black;
+        }
+        #display{
+            margin-top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+   <div> <button id="show">Show Button</button></div>
+    <div id="display"></div>
+    <script>
+        window.addEventListener("load",()=>{
+            let show = document.getElementById("show");
+            show.addEventListener("click",creatBtn)
+        })
+        function creatBtn(){
+            let display = document.getElementById("display");
+            let btn1 = document.createElement('btn');
+            btn1.className = 'btnn';
+            btn1.textContent = 1;
+            btn1.addEventListener("click",()=>{
+                alert("1")
+            })
+
+            let btn2 = document.createElement('btn');
+            btn2.className = 'btnn';
+            btn2.textContent = 2;
+            btn2.addEventListener("click",()=>{
+                alert("2")
+            })
+            let btn3 = document.createElement('btn');
+            btn3.className = 'btnn';
+            btn3.textContent = 3;
+            btn3.addEventListener("click",()=>{
+                alert("3")
+            })
+            let btn4 = document.createElement('btn');
+            btn4.className = 'btnn';
+            btn4.textContent = 4;
+            btn4.addEventListener("click",()=>{
+                alert("4")
+            })
+            let btn5 = document.createElement('btn');
+            btn5.className = 'btnn';
+            btn5.textContent = 5;
+            btn5.addEventListener("click",()=>{
+                alert("5")
+            })
+
+            display.append(btn1,btn2,btn3,btn4,btn5);
+        }
+    </script>
+</body>
+</html>
